@@ -48,12 +48,12 @@ const dockApps = [
         icon: "safari.png",
         canOpen: true,
     },
-    {
+    /*{
         id: "photos",
         name: "Galeria", // was "Photos"
         icon: "photos.png",
         canOpen: true,
-    },
+    },*/
     {
         id: "contact",
         name: "Kontakt", // or "Get in touch"
@@ -229,7 +229,7 @@ const WORK_LOCATION = {
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-5", // icon position inside Finder
-            windowPosition: "top-[5vh] left-5", // optional: Finder window position
+            windowPosition: "top-[50vh] left-60", // optional: Finder window position
             children: [
                 {
                     id: 1,
@@ -279,7 +279,7 @@ const WORK_LOCATION = {
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-52 right-80",
-            windowPosition: "top-[20vh] left-7",
+            windowPosition: "top-[20vh] left-200",
             children: [
                 {
                     id: 1,
@@ -330,7 +330,7 @@ const WORK_LOCATION = {
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-80",
-            windowPosition: "top-[33vh] left-7",
+            windowPosition: "top-[33vh] left-350",
             children: [
                 {
                     id: 1,
@@ -343,7 +343,7 @@ const WORK_LOCATION = {
                         "Mowa o właśnie tym portfolio które teraz przeglądasz :)",
                     ],
                 },
-                {
+                /*{
                     id: 2,
                     name: "portfolio.com",
                     icon: "/images/safari.png",
@@ -351,7 +351,7 @@ const WORK_LOCATION = {
                     fileType: "url",
                     href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
                     position: "top-10 right-20",
-                },
+                },*/
                 {
                     id: 4,
                     name: "Zyciorys.png",
