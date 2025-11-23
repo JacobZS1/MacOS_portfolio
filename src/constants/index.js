@@ -1,3 +1,6 @@
+// Ensure assets work both locally and when deployed under a sub-path (Vite base)
+const BASE = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) ? import.meta.env.BASE_URL : '/';
+
 const navLinks = [
     {
         id: 1,
@@ -19,19 +22,19 @@ const navLinks = [
 const navIcons = [
     {
         id: 1,
-        img: "/icons/wifi.svg",
+        img: `${BASE}icons/wifi.svg`,
     },
     {
         id: 2,
-        img: "/icons/search.svg",
+        img: `${BASE}icons/search.svg`,
     },
     {
         id: 3,
-        img: "/icons/user.svg",
+        img: `${BASE}icons/user.svg`,
     },
     {
         id: 4,
-        img: "/icons/mode.svg",
+        img: `${BASE}icons/mode.svg`,
     },
 ];
 
@@ -80,21 +83,21 @@ const blogPosts = [
         date: "Sep 2, 2025",
         title:
             "Facebook",
-        image: "/images/fb.webp",
+        image: `${BASE}images/fb.webp`,
         link: "https://www.facebook.com/profile.php?id=100090248920498",
     },
     {
         id: 2,
         date: "Aug 28, 2025",
         title: "Instagram",
-        image: "/images/ig.webp",
+        image: `${BASE}images/ig.webp`,
         link: "https://www.instagram.com/kubcio.exe/",
     },
     {
         id: 3,
         date: "Aug 15, 2025",
         title: "TikTok",
-        image: "/images/tt.png",
+        image: `${BASE}images/tt.png`,
         link: "https://www.tiktok.com/@kubcio.exe?_r=1&_t=ZN-91e8b4htWBq",
     },
 ];
@@ -102,27 +105,27 @@ const blogPosts = [
 const techStack = [
     {
         category: "Frontend",
-        items: ["React.js", "Next.js", "TypeScript"],
+        items: ["React", "JavaScript"],
     },
-    {
+    /*{
         category: "Mobile",
         items: ["React Native", "Expo"],
-    },
+    },*/
     {
         category: "Styling",
-        items: ["Tailwind CSS", "Sass", "CSS"],
+        items: ["Tailwind CSS", "CSS"],
     },
     {
         category: "Backend",
-        items: ["Node.js", "Express", "NestJS", "Hono"],
+        items: ["Node.js"],
     },
     {
         category: "Database",
-        items: ["MongoDB", "PostgreSQL"],
+        items: ["SQLserver", "mySQL"],
     },
     {
         category: "Dev Tools",
-        items: ["Git", "GitHub", "Docker"],
+        items: ["Git", "GitHub"],
     },
 ];
 
@@ -130,28 +133,28 @@ const socials = [
     {
         id: 1,
         text: "TikTok",
-        icon: "/icons/tiktok.svg",
+        icon: `${BASE}icons/tiktok.svg`,
         bg: "#f4656b",
         link: "https://www.tiktok.com/@kubcio.exe?_r=1&_t=ZN-91e8b4htWBq",
     },
     /*{
         id: 2,
         text: "Platform",
-        icon: "/icons/atom.svg",
+        icon: `${BASE}icons/atom.svg`,
         bg: "#4bcb63",
         link: "https://jsmastery.com/",
     },*/
     {
         id: 3,
         text: "Twitter/X",
-        icon: "/icons/twitter.svg",
+        icon: `${BASE}icons/twitter.svg`,
         bg: "#ff866b",
         link: "https://x.com/kubciooooo?s=21",
     },
     {
         id: 4,
         text: "Facebook",
-        icon: "/icons/facebook.svg",
+        icon: `${BASE}icons/facebook.svg`,
         bg: "#05b6f6",
         link: "https://www.facebook.com/profile.php?id=100090248920498",
     },
@@ -160,27 +163,27 @@ const socials = [
 const photosLinks = [
     {
         id: 1,
-        icon: "/icons/gicon1.svg",
+        icon: `${BASE}icons/gicon1.svg`,
         title: "Library",
     },
     {
         id: 2,
-        icon: "/icons/gicon2.svg",
+        icon: `${BASE}icons/gicon2.svg`,
         title: "Memories",
     },
     {
         id: 3,
-        icon: "/icons/file.svg",
+        icon: `${BASE}icons/file.svg`,
         title: "Places",
     },
     {
         id: 4,
-        icon: "/icons/gicon4.svg",
+        icon: `${BASE}icons/gicon4.svg`,
         title: "People",
     },
     {
         id: 5,
-        icon: "/icons/gicon5.svg",
+        icon: `${BASE}icons/gicon5.svg`,
         title: "Favorites",
     },
 ];
@@ -188,19 +191,19 @@ const photosLinks = [
 const gallery = [
     {
         id: 1,
-        img: "/images/gal1.png",
+        img: `${BASE}images/gal1.png`,
     },
     {
         id: 2,
-        img: "/images/gal2.png",
+        img: `${BASE}images/gal2.png`,
     },
     {
         id: 3,
-        img: "/images/gal3.png",
+        img: `${BASE}images/gal3.png`,
     },
     {
         id: 4,
-        img: "/images/gal4.png",
+        img: `${BASE}images/gal4.png`,
     },
 ];
 
@@ -219,14 +222,14 @@ const WORK_LOCATION = {
     id: 1,
     type: "work",
     name: "Prace",
-    icon: "/icons/work.svg",
+    icon: `${BASE}icons/work.svg`,
     kind: "folder",
     children: [
         // ▶ Project 1
         {
             id: 5,
             name: "DarkOps",
-            icon: "/images/folder.png",
+            icon: `${BASE}images/folder.png`,
             kind: "folder",
             position: "top-10 left-5", // icon position inside Finder
             windowPosition: "top-[50vh] left-60", // optional: Finder window position
@@ -234,7 +237,7 @@ const WORK_LOCATION = {
                 {
                     id: 1,
                     name: "Projekt DarkOps.txt",
-                    icon: "/images/txt.png",
+                    icon: `${BASE}images/txt.png`,
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
@@ -245,7 +248,7 @@ const WORK_LOCATION = {
                 {
                     id: 2,
                     name: "darkops.com",
-                    icon: "/images/safari.png",
+                    icon: `${BASE}images/safari.png`,
                     kind: "file",
                     fileType: "url",
                     href: "https://darkopsproject.github.io/darkops/",
@@ -254,16 +257,16 @@ const WORK_LOCATION = {
                 {
                     id: 4,
                     name: "darkops.png",
-                    icon: "/images/image.png",
+                    icon: `${BASE}images/image.png`,
                     kind: "file",
                     fileType: "img",
                     position: "top-52 right-80",
-                    imageUrl: "/images/project-1.png",
+                    imageUrl: `${BASE}images/project-1.png`,
                 },
                 {
                     id: 5,
                     name: "style.css",
-                    icon: "/images/plain.png",
+                    icon: `${BASE}images/plain.png`,
                     kind: "file",
                     fileType: "fig",
                     href: "https://google.com",
@@ -276,7 +279,7 @@ const WORK_LOCATION = {
         {
             id: 6,
             name: "Strona Wizytówka",
-            icon: "/images/folder.png",
+            icon: `${BASE}images/folder.png`,
             kind: "folder",
             position: "top-52 right-80",
             windowPosition: "top-[20vh] left-200",
@@ -284,7 +287,7 @@ const WORK_LOCATION = {
                 {
                     id: 1,
                     name: "wizytowka.txt",
-                    icon: "/images/txt.png",
+                    icon: `${BASE}images/txt.png`,
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 right-10",
@@ -296,7 +299,7 @@ const WORK_LOCATION = {
                 {
                     id: 2,
                     name: "wizytowka.com",
-                    icon: "/images/safari.png",
+                    icon: `${BASE}images/safari.png`,
                     kind: "file",
                     fileType: "url",
                     href: "https://kubcio.tiiny.site/",
@@ -305,16 +308,16 @@ const WORK_LOCATION = {
                 {
                     id: 4,
                     name: "content.png",
-                    icon: "/images/image.png",
+                    icon: `${BASE}images/image.png`,
                     kind: "file",
                     fileType: "img",
                     position: "top-52 left-80",
-                    imageUrl: "/images/project-2.png",
+                    imageUrl: `${BASE}images/project-2.png`,
                 },
                 {
                     id: 5,
                     name: "style.css",
-                    icon: "/images/plain.png",
+                    icon: `${BASE}images/plain.png`,
                     kind: "file",
                     fileType: "fig",
                     href: "https://google.com",
@@ -327,7 +330,7 @@ const WORK_LOCATION = {
         {
             id: 7,
             name: "Portfolio",
-            icon: "/images/folder.png",
+            icon: `${BASE}images/folder.png`,
             kind: "folder",
             position: "top-10 left-80",
             windowPosition: "top-[33vh] left-350",
@@ -335,7 +338,7 @@ const WORK_LOCATION = {
                 {
                     id: 1,
                     name: "Portfolio.txt",
-                    icon: "/images/txt.png",
+                    icon: `${BASE}images/txt.png`,
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
@@ -346,7 +349,7 @@ const WORK_LOCATION = {
                 /*{
                     id: 2,
                     name: "portfolio.com",
-                    icon: "/images/safari.png",
+                    icon: `${BASE}images/safari.png`,
                     kind: "file",
                     fileType: "url",
                     href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
@@ -355,16 +358,16 @@ const WORK_LOCATION = {
                 {
                     id: 4,
                     name: "Zyciorys.png",
-                    icon: "/images/image.png",
+                    icon: `${BASE}images/image.png`,
                     kind: "file",
                     fileType: "img",
                     position: "top-52 right-80",
-                    imageUrl: "/images/project-3.png",
+                    imageUrl: `${BASE}images/project-3.png`,
                 },
                 {
                     id: 5,
                     name: "Design.fig",
-                    icon: "/images/plain.png",
+                    icon: `${BASE}images/plain.png`,
                     kind: "file",
                     fileType: "fig",
                     href: "https://google.com",
@@ -379,45 +382,45 @@ const ABOUT_LOCATION = {
     id: 2,
     type: "about",
     name: "O mnie",
-    icon: "/icons/info.svg",
+    icon: `${BASE}icons/info.svg`,
     kind: "folder",
     children: [
         {
             id: 1,
             name: "ja.png",
-            icon: "/images/image.png",
+            icon: `${BASE}images/image.png`,
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
-            imageUrl: "/images/kuba.jpg",
+            imageUrl: `${BASE}images/kuba.jpg`,
         },
         {
             id: 2,
             name: "casualowy-ja.png",
-            icon: "/images/image.png",
+            icon: `${BASE}images/image.png`,
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
-            imageUrl: "/images/kuba-2.jpg",
+            imageUrl: `${BASE}images/kuba-2.jpg`,
         },
         {
             id: 3,
             name: "powazny-ja.png",
-            icon: "/images/image.png",
+            icon: `${BASE}images/image.png`,
             kind: "file",
             fileType: "img",
             position: "top-52 left-80",
-            imageUrl: "/images/kuba-3.jpeg",
+            imageUrl: `${BASE}images/kuba-3.jpeg`,
         },
         {
             id: 4,
             name: "o-mnie.txt",
-            icon: "/images/txt.png",
+            icon: `${BASE}images/txt.png`,
             kind: "file",
             fileType: "txt",
             position: "top-60 left-5",
             subtitle: "Poznaj kreatora tego portfolio",
-            image: "/images/kuba.jpg",
+            image: `${BASE}images/kuba.jpg`,
             description: [
                 "Hej! Jestem Kuba 👋, staram się tworzyć projekty, które nie tylko wyglądają świetnie, ale też działają bez zacięć.",
                 "Poza programowaniem najczęściej bawię się layoutami o 2 w nocy, popijam drogie kawy albo impulsywnie kupuję gadżety, które absolutnie “musiałem mieć” 😅"
@@ -430,13 +433,13 @@ const RESUME_LOCATION = {
     id: 3,
     type: "resume",
     name: "CV",
-    icon: "/icons/file.svg",
+    icon: `${BASE}icons/file.svg`,
     kind: "folder",
     children: [
         {
             id: 1,
             name: "CV.pdf",
-            icon: "/images/pdf.png",
+            icon: `${BASE}images/pdf.png`,
             kind: "file",
             fileType: "pdf",
             // you can add `href` if you want to open a hosted resume
@@ -449,26 +452,26 @@ const TRASH_LOCATION = {
     id: 4,
     type: "trash",
     name: "Kosz",
-    icon: "/icons/trash.svg",
+    icon: `${BASE}icons/trash.svg`,
     kind: "folder",
     children: [
         {
             id: 1,
             name: "pierdola1.png",
-            icon: "/images/image.png",
+            icon: `${BASE}images/image.png`,
             kind: "file",
             fileType: "img",
             position: "top-10 left-10",
-            imageUrl: "/images/trash-1.png",
+            imageUrl: `${BASE}images/trash-1.png`,
         },
         {
             id: 2,
             name: "pierdola2.png",
-            icon: "/images/image.png",
+            icon: `${BASE}images/image.png`,
             kind: "file",
             fileType: "img",
             position: "top-40 left-80",
-            imageUrl: "/images/trash-2.png",
+            imageUrl: `${BASE}images/trash-2.png`,
         },
     ],
 };

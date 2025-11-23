@@ -3,7 +3,7 @@ import WindowControls from "#components/WindowControls.jsx";
 import { Download } from "lucide-react";
 
 const Resume = () => {
-  const filePath = "/files/CV.pdf"; // served from public/files
+  const filePath = `${import.meta.env.BASE_URL}files/CV.pdf`; // served from public/files
   // Hide built-in PDF toolbar/controls while keeping our own download button
   const iframeSrc = `${filePath}#toolbar=0&navpanes=0&scrollbar=0`;
   return (

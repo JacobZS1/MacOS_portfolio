@@ -87,8 +87,8 @@ const Dock = () => {
                         disabled={!canOpen}
                         onClick={() => toogleApp({ id, canOpen })}
                     >
-                        <img
-                            src={`/images/${icon}`}
+                    <img
+                            src={`${import.meta.env.BASE_URL}images/${icon}`}
                             alt={name}
                             loading="lazy"
                             className={canOpen ? "" : "opacity-60"}

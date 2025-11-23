@@ -26,7 +26,7 @@ const Home = () => {
                 <li key={project.id} className={clsx("group folder", project.windowPosition)}
                 onClick={() => handleOpenProjectFinder(project)}
                 >
-                    <img src="/images/folder.png" alt={project.name} />
+                    <img src={`${import.meta.env.BASE_URL}images/folder.png`} alt={project.name} />
                     <p>{project.name}</p>
                 </li>
             ))}
