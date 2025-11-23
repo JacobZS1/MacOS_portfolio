@@ -1,17 +1,17 @@
 const navLinks = [
     {
         id: 1,
-        name: "Projects",
+        name: "Projekty",
         type: "finder",
     },
     {
         id: 3,
-        name: "Contact",
+        name: "Kontakt",
         type: "contact",
     },
     {
         id: 4,
-        name: "Resume",
+        name: "Życiorys zawodowy",
         type: "resume",
     },
 ];
@@ -50,25 +50,25 @@ const dockApps = [
     },
     {
         id: "photos",
-        name: "Gallery", // was "Photos"
+        name: "Galeria", // was "Photos"
         icon: "photos.png",
         canOpen: true,
     },
     {
         id: "contact",
-        name: "Contact", // or "Get in touch"
+        name: "Kontakt", // or "Get in touch"
         icon: "contact.png",
         canOpen: true,
     },
     {
         id: "terminal",
-        name: "Skills", // was "Terminal"
+        name: "Umiejętności", // was "Terminal"
         icon: "terminal.png",
         canOpen: true,
     },
     {
         id: "trash",
-        name: "Archive", // was "Trash"
+        name: "Archiwum", // was "Trash"
         icon: "trash.png",
         canOpen: false,
     },
